@@ -1,0 +1,15 @@
+[package]
+name = "word_type_rust"
+version = "0.2.0"
+authors = ["Eddy Ekofo", "A simple typing game"]
+edition = "2018"
+
+[dependencies]
+amethyst = {version = "0.15.2", features = ["no-slow-safety-checks"]}
+log = { version = "0.4.8", features = ["serde"] }
+
+[features]
+default = ["metal"]
+empty = ["amethyst/empty"]
+metal = ["amethyst/metal"]
+vulkan = ["amethyst/vulkan"]
