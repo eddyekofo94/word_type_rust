@@ -1,10 +1,3 @@
-<img src="repo/splash.png" alt="Amethyst 2D starter template" />
-
-This project template will get you from 0 to drawing something on the screen in no time. If you're looking for a more in-depth introduction to the engine, please have a look at [our book](https://book.amethyst.rs/stable/)!
-
-This project template also includes a small example of how to draw UI, see in state.rs for create_ui_example().
-<img src="repo/screenshot.png" alt="Amethyst 2D starter template" height="300px" />
-
 ## Quickstart
 
 - Clone the repository
@@ -25,6 +18,7 @@ cargo run
 This starter uses vulkan as a renderer by default. You'll want to change the backend to use `metal`, which can be done by opening the `Cargo.toml` file and changing
 
 ```toml
+# on linux this must be installed
 [features]
 default = ["vulkan"]
 ```
@@ -47,12 +41,12 @@ You might need to install some dependencies. Please refer to [this section](http
 
 This project contains the minimum amount of code needed to draw sprites to the screen. Here's a small summary of what you'll find in the source files:
 
-- `resources/display_config.ron`  
+- `resources/display_config.ron`
   Contains the window configuration (size, title).
 
-- `src/main.rs`  
+- `src/main.rs`
   Creates the render graph, adds the required bundles, builds the game data with our own state and finally, starts the game's main event loop.
 
-- `src/state.rs`  
-  Implements the main game state. In the `on_start` hook, the camera is initialized, and the sprites that will be drawn are loaded and their entities created.  
+- `src/state.rs`
+  Implements the main game state. In the `on_start` hook, the camera is initialized, and the sprites that will be drawn are loaded and their entities created.
    In the `handle_event` hook, we print any keys that were pressed and close the window if the user presses escape or the OS requests that we quit.
